@@ -1,3 +1,15 @@
 <h1>
   {{title}}
+
 </h1>
+
+
+<form [formGroup]="myForm"> 
+  <input formControlName="name"><br>
+  <app-address [address]="myForm.controls.address"></app-address>
+</form>
+<p>Form Changed: {{ myForm.dirty }}</p>
+<p>userForm value: {{ myForm.value | json}}</p>
+<p>userForm status: {{ myForm.status | json }}</p>
+
+
